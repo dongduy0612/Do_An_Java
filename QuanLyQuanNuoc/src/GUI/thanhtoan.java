@@ -71,6 +71,7 @@ public class thanhtoan extends javax.swing.JFrame {
         txtMatKhau = new javax.swing.JPasswordField();
         txtMatKhauMoi = new javax.swing.JPasswordField();
         txtNhapLaiMK = new javax.swing.JPasswordField();
+        btnQuayLai = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         lbTime = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -152,6 +153,13 @@ public class thanhtoan extends javax.swing.JFrame {
 
         txtNhapLaiMK.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
+        btnQuayLai.setText("Quay lại");
+        btnQuayLai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQuayLaiActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout dlDoiMatKhauLayout = new javax.swing.GroupLayout(dlDoiMatKhau.getContentPane());
         dlDoiMatKhau.getContentPane().setLayout(dlDoiMatKhauLayout);
         dlDoiMatKhauLayout.setHorizontalGroup(
@@ -161,9 +169,6 @@ public class thanhtoan extends javax.swing.JFrame {
                     .addGroup(dlDoiMatKhauLayout.createSequentialGroup()
                         .addGap(98, 98, 98)
                         .addComponent(jLabel13))
-                    .addGroup(dlDoiMatKhauLayout.createSequentialGroup()
-                        .addGap(206, 206, 206)
-                        .addComponent(btnXacNhan))
                     .addGroup(dlDoiMatKhauLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(dlDoiMatKhauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -180,6 +185,12 @@ public class thanhtoan extends javax.swing.JFrame {
                                     .addComponent(txtMatKhau, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtMatKhauMoi, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(131, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dlDoiMatKhauLayout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addComponent(btnQuayLai)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnXacNhan)
+                .addGap(188, 188, 188))
         );
         dlDoiMatKhauLayout.setVerticalGroup(
             dlDoiMatKhauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -198,9 +209,11 @@ public class thanhtoan extends javax.swing.JFrame {
                 .addGroup(dlDoiMatKhauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
                     .addComponent(txtNhapLaiMK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
-                .addComponent(btnXacNhan)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addGap(53, 53, 53)
+                .addGroup(dlDoiMatKhauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnXacNhan)
+                    .addComponent(btnQuayLai))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -777,8 +790,15 @@ public class thanhtoan extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnXacNhanActionPerformed
 
+    private void btnQuayLaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuayLaiActionPerformed
+        // TODO add your handling code here:
+       dlDoiMatKhau.dispose();
+        setVisible(true);
+    }//GEN-LAST:event_btnQuayLaiActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLuu;
+    private javax.swing.JButton btnQuayLai;
     private javax.swing.JButton btnThem;
     private javax.swing.JButton btnXacNhan;
     private javax.swing.JButton btnXoa;
